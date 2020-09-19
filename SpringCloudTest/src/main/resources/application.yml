@@ -1,0 +1,25 @@
+
+#监控
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+info:
+  app:
+    name: spring-boot-hello
+    version: 1.0.0
+
+
+spring:
+  profiles:
+    active: test
+
+  application:
+    name: hello-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:1111/eureka/, http://peer2:1112/eureka/
